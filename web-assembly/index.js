@@ -7,7 +7,7 @@ function loadWebAssembly(fileName) {
     .then(module => {return new WebAssembly.Instance(module) });
 };
   
-loadWebAssembly('web-assembly\\squarer.wasm')
+loadWebAssembly('https://github.com/Leefrost/poligon/blob/master/web-assembly/wasm/square.wasm')
   .then(instance => {
     squarer = instance.exports._Z7squarei;
     console.log('Finished compiling! Ready when you are...');
